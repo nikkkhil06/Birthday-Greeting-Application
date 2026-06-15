@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="pro3.css">
+</head>
+<body>
+    <audio id="music" autoplay loop hidden>
+            <source src="chipichapa.mp3" type="audio/mp3">
+        </audio>
+    <section class="mainsec1" id="11">
+            <section class="sec11">
+                <img class="wis" src="wish.gif">
+            </section>
+            <section class="sec12">
+                <button class="b1" onclick="doThings('12')">Scroll DOWN</button>
+                <img class="dan" src="dancing.gif">
+                <img class="dis" src="disco.gif">
+    </section>
+    </section>
+    <script>
+        function doThings(sectionID){
+            if(sectionID=='12'){
+                document.getElementById("music").pause();
+            }
+            document.getElementById(sectionID).scrollIntoView({behavior:"smooth"});
+        }
+    </script>
+    <section class="mainsec" id="12">
+        <section class="sec1">
+            <div class="box1"><img src="sunset.jpg"></div>
+            <div class="box2"><img src="sunset.jpg"></div>
+            <div class="box3"><img src="sunset.jpg"></div>
+            <div class="box4"><img src="sunset.jpg"></div>
+            <div class="box5"><img src="sunset.jpg"></div>
+            <div class="box6"><img src="sunset.jpg"></div>
+            <div class="box7"><img src="sunset.jpg"></div>
+            <div class="box8"><img src="sunset.jpg"></div>
+        </section>
+    <section class="sec2">
+        <h1 class="birth">Happy Birthday [Name]!>>></h1>
+        <button class="imgbutton" onclick="change()">Scroll DOWN</button>
+        <button class="imgbutton2" onclick="change2()">Scroll UP</button>
+    </section>
+    </section> 
+    <script>
+        function change(){
+            document.getElementById(13).scrollIntoView({behavior:"smooth"});
+        }
+        function change2(){
+            document.getElementById(11).scrollIntoView({behavior:"smooth"});
+            document.getElementById("music").play();
+        }
+    </script>
+    <section class="mainsec2" id="13">
+        <section class="sec21">
+            <h1 style="margin-top: 30px">i have made something>>></h1>
+            <h2>TAP to OPEN</h2>
+                    <img src="envelope.gif" onclick="showMessage()" class="mail" id="im">
+                    <div class="div2" id="box2">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore aspernatur, tempora, cupiditate soluta distinctio sapiente repellat voluptatem enim numquam quae, possimus perspiciatis sequi cum? Culpa necessitatibus quaerat voluptatum libero doloribus?</p>
+                    </div>
+        </section>
+            <section class="sec22">
+                <button class="s3b1" onclick="doThings2()">Scroll UP</button>
+                <button class="b3" onclick="location.href='pro4.html'">next>>></button>
+            </section>
+    </section>
+    <script>
+        function showMessage(){
+            document.getElementById("im").classList.add("hide-mail");
+            document.getElementById("box2").classList.add("div2-open");
+        }
+        function doThings2(){
+            document.getElementById("12").scrollIntoView({behavior:"smooth"});
+        }
+    </script>
+</body>
